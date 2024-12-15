@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { useDispatch } from "react-redux";
-import "./App.css";
+// import "./App.css";
 import authService from "./appwrite/auth";
 import Footer from "./components/Footer/Footer";
 import Header from "./components/Header/Header";
@@ -30,7 +30,6 @@ function App() {
       <div className="w-full block">
         <Header />
         <main>
-          TODO:
           <Outlet />
         </main>
         <Footer />
