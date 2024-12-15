@@ -9,7 +9,7 @@ export class DbService {
   constructor() {
     this.client
       .setEndpoint(config.appwriteUrl)
-      .setEndpoint(config.appwriteProjectId);
+      .setProject(config.appwriteProjectId);
 
     this.databases = new Databases(this.client);
     this.bucket = new Storage(this.client);
@@ -87,7 +87,6 @@ export class DbService {
       );
     } catch (error) {
       throw error;
-      return false;
     }
   }
 
@@ -102,7 +101,6 @@ export class DbService {
       );
     } catch (error) {
       throw error;
-      return false;
     }
   }
 
@@ -112,11 +110,14 @@ export class DbService {
       return true;
     } catch (error) {
       throw error;
-      return false;
     }
   }
 
   getFilePreview(fileId) {
+    if (!fileId) {
+      console.warn("Missing fileId for getFilePreview");
+      return null;
+    }
     return this.bucket.getFilePreview(config.appwriteBucketId, fileId);
   }
 }
