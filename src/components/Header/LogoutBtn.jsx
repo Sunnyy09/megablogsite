@@ -12,7 +12,12 @@ function LogoutBtn() {
   };
 
   return (
-    <button className="inline-block bg-blue-100 rounded-full">Logout</button>
+    <button
+      onClick={logouthandler}
+      className="inline-block bg-blue-100 rounded-full"
+    >
+      Logout
+    </button>
   );
 }
 

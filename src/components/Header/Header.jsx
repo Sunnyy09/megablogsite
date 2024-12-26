@@ -15,6 +15,11 @@ function Header() {
       active: true,
     },
     {
+      name: "About",
+      slug: "/about",
+      active: !authStatus,
+    },
+    {
       name: "Login",
       slug: "/login",
       active: !authStatus,
@@ -36,9 +41,9 @@ function Header() {
     },
   ];
   return (
-    <header className="py-3 shadow bg-gray-500">
-      <Container>
-        <nav className="flex">
+    <header className="py-3 h-[95px] shadow bg-[#364037] text-[#fff]">
+      <Container className={`h-full`}>
+        <nav className="h-full mx-24 flex justify-center items-center">
           <div className="mr-4">
             <Link to="/">
               <Logo width="70px" />
@@ -50,7 +55,7 @@ function Header() {
                 <li key={item.name}>
                   <button
                     onClick={() => navigate(item.slug)}
-                    className="inline-block px-6 py-2 duration-200 hover:bg-blue-100 rounded-full "
+                    className="inline-block text-lg text-[#ffffff] px-6 py-2 duration-200 hover:text-white/60"
                   >
                     {item.name}
                   </button>

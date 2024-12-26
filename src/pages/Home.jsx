@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import dbService from "../appwrite/databaseConf";
-import { Container, PostCard } from "../components";
+// import { Container, PostCard } from "../components";
+import Main from "../components/Home/Main";
 
 function Home() {
   const [posts, setPosts] = useState([]);
@@ -12,42 +13,39 @@ function Home() {
     });
   }, []);
 
-  if (posts.length === 0) {
-    return (
-      <div className="w-full py-8 mt-4 text-center">
-        <Container>
-          <div className="flex flex-wrap">
-            <div className="p-2 w-full">
-              <h1 className="text-2xl font-bold hover:text-gray-500">
+  // if (posts.length === 0) {
+  return (
+    <div className="w-full min-h-screen text-center">
+      <div className="flex flex-wrap">
+        <div className="w-full">
+          {/* <h1 className="text-2xl font-bold hover:text-gray-500">
                 No Posts Found |{" "}
                 <span className="text-red-500 hover:text-red-700">
                   Login to read posts
                 </span>
-              </h1>
-            </div>
-          </div>
-        </Container>
-      </div>
-    );
-  }
-
-  return (
-    <div className="w-full py-8">
-      <Container>
-        <div className="flex flex-wrap">
-          {posts.map((post) => (
-            <div key={post.$id} className="p-2 w-1/4">
-              <PostCard {...post} />
-              {/* post={post} use spread instead of this */}
-            </div>
-          ))}
+              </h1> */}
+          <Main />
         </div>
-      </Container>
+      </div>
     </div>
   );
 }
 
-export default Home;
+// return (
+//   <div className="w-full py-8">
+//     <Container>
+//       <div className="flex flex-wrap">
+//         {posts.map((post) => (
+//           <div key={post.$id} className="p-2 w-1/4">
+//             <PostCard {...post} />
+//             {/* post={post} use spread instead of this */}
+//           </div>
+//         ))}
+//       </div>
+//     </Container>
+//   </div>
+// );
+// }
 
 // {posts ? (
 //   posts.map((post) => (
@@ -60,3 +58,5 @@ export default Home;
 //     No Posts Found
 //   </h1>
 // )}
+
+export default Home;
