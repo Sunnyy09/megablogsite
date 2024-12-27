@@ -1,6 +1,5 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import ShowCard from "./Card/ShowCards";
 
 function Main() {
   return (
@@ -36,8 +35,8 @@ function Main() {
         </div>
       </div>
       {/* featured-post */}
-      <div className="absolute top-[550px] z-10 font-serif w-[70vw] h-full bg-[#364037]">
-        <div className="px-8 py-4 min-h-[60vh] w-full flex">
+      <div className="absolute top-[550px] z-10 font-serif w-[70vw] bg-[#364037]">
+        <div className="px-8 py-4 max-h-[60vh] w-full flex">
           <div className="w-1/2">
             <h2 className="text-left mb-6 text-2xl text-white font-bold ">
               Featured Post
@@ -68,18 +67,7 @@ function Main() {
             </div>
           </div>
         </div>
-        <div className="bg-white h-full w-full">
-          <div className="w-full py-8">
-            <div className="my-6 w-full">
-              <h1 className="text-2xl decoration-current font-semibold">
-                Recent Posts
-              </h1>
-            </div>
-            <div className="w-full">
-              <ShowCard />
-            </div>
-          </div>
-        </div>
+        {/* Recent posts */}
       </div>
     </div>
   );
