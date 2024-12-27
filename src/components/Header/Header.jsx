@@ -41,7 +41,7 @@ function Header() {
     },
   ];
   return (
-    <header className="py-3 h-[95px] shadow bg-[#364037] text-[#fff]">
+    <header className="py-3 h-[95px] w-full fixed z-20 shadow bg-[#364037] text-[#fff]">
       <Container className={`h-full`}>
         <nav className="h-full mx-24 flex justify-center items-center">
           <div className="mr-4">
