@@ -29,14 +29,14 @@ function Signup() {
   return (
     <div className="flex justify-center items-center">
       <div
-        className={`mx-auto w-full max-w-lg bg-gray-100 rounded-xl p-10 border border-black/10`}
+        className={`mx-auto w-full max-w-lg bg-[#fff] rounded-xl p-10 border border-black/10 shadow`}
       >
-        <div className="mb-2 flex justify-center">
+        {/* <div className="mb-2 flex justify-center">
           <span className="inline-block w-full max-w-[100px]">
             <Logo width="100%" />
           </span>
-        </div>
-        <h2 className="text-center text-base text-black/60">
+        </div> */}
+        <h2 className="text-center text-2xl font-bold leading-normal">
           Sign up to create account
         </h2>
         <p className="mt-2 text-center text-base text-black/60">
@@ -50,17 +50,19 @@ function Signup() {
         </p>
         {error && <p className="text-red-600 mt-8 text-center">{error}</p>}
 
-        <form onSubmit={handleSubmit(create)}>
+        <form onSubmit={handleSubmit(create)} className="mt-6">
           <div className="space-y-5">
             <Input
               type="text"
               label="Full Name: "
               placeholder="Enter your full name"
+              required
               {...register("name", { required: true })}
             />
             <Input
               label="Email: "
               placeholder="Enter your email"
+              required
               type="email"
               {...register("email", {
                 required: true,
@@ -72,8 +74,9 @@ function Signup() {
               })}
             />
             <Input
-              label="password"
+              label="Password: "
               type="password"
+              required
               placeholder="Enter your password"
               {...register("password", {
                 required: true,
