@@ -33,14 +33,14 @@ function Login() {
   return (
     <div className="flex items-center justify-center w-full">
       <div
-        className={`mx-auto w-full max-w-lg bg-[#fff] rounded-xl px-12 py-10 border border-black/10 shadow-md`}
+        className={`mx-auto w-full max-w-lg bg-[#986c43] rounded-xl px-12 py-10 border border-black/50 shadow-lg shadow-[#986c43]`}
       >
         {/* <div className="mb-2 flex justify-center">
           <span className="inline-block w-full max-w-[100px]">
             <Logo width="100%" />
           </span>
         </div> */}
-        <h2 className="text-center text-2xl font-bold leading-normal">
+        <h2 className="text-center text-[#fff] text-2xl font-bold leading-normal">
           Sign in to your account
         </h2>
         <p className="mt-2 text-center text-base  text-black/60">
@@ -84,7 +84,11 @@ function Login() {
             {/* {errors.password && (
               <p className="text-red-600">{errors.password.message}</p>
             )} */}
-            <Button type="submit" className="w-full mt-4 mb-2">
+            <Button
+              type="submit"
+              style={{ backgroundColor: "#364037" }}
+              className={`w-full mt-4 mb-2`}
+            >
               Sign In
             </Button>
           </div>

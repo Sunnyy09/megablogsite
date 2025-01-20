@@ -20,6 +20,11 @@ function Header() {
       active: !authStatus,
     },
     {
+      name: "Contact",
+      slug: "/contact",
+      active: !authStatus,
+    },
+    {
       name: "Login",
       slug: "/login",
       active: !authStatus,
@@ -55,7 +60,15 @@ function Header() {
                 <li key={item.name}>
                   <button
                     onClick={() => navigate(item.slug)}
-                    className="inline-block text-lg text-[#ffffff] px-6 py-2 duration-200 hover:text-white/60"
+                    className={`inline-block text-md font-thin text-gray-100 px-6 py-2 duration-200 hover:text-white/70 hover:underline transition-all font-sans ${
+                      item.slug === "/login"
+                        ? "bg-[#986c43] text-[#f4dec9] ml-2 mr-2 hover:bg-white/10 hover:no-underline rounded"
+                        : ""
+                    } ${
+                      item.slug === "/signup"
+                        ? "bg-[#986c43] text-[#f4dec9] hover:bg-white/10 hover:no-underline rounded"
+                        : ""
+                    }`}
                   >
                     {item.name}
                   </button>

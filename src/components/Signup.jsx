@@ -29,14 +29,14 @@ function Signup() {
   return (
     <div className="flex justify-center items-center">
       <div
-        className={`mx-auto w-full max-w-lg bg-[#fff] rounded-xl p-10 border border-black/10 shadow`}
+        className={`mx-auto w-full max-w-lg bg-[#986c43] rounded-xl p-10 border border-black/50 shadow-lg shadow-[#986c43]`}
       >
         {/* <div className="mb-2 flex justify-center">
           <span className="inline-block w-full max-w-[100px]">
             <Logo width="100%" />
           </span>
         </div> */}
-        <h2 className="text-center text-2xl font-bold leading-normal">
+        <h2 className="text-center text-[#fff] text-2xl font-bold">
           Sign up to create account
         </h2>
         <p className="mt-2 text-center text-base text-black/60">
@@ -51,7 +51,7 @@ function Signup() {
         {error && <p className="text-red-600 mt-8 text-center">{error}</p>}
 
         <form onSubmit={handleSubmit(create)} className="mt-6">
-          <div className="space-y-5">
+          <div className="space-y-2">
             <Input
               type="text"
               label="Full Name: "
@@ -76,13 +76,18 @@ function Signup() {
             <Input
               label="Password: "
               type="password"
+              className="mb-6"
               required
               placeholder="Enter your password"
               {...register("password", {
                 required: true,
               })}
             />
-            <Button type="submit" className="w-full">
+            <Button
+              type="submit"
+              style={{ backgroundColor: "#364037" }}
+              className="w-full"
+            >
               Create Account
             </Button>
           </div>

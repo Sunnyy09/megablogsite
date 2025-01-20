@@ -4,7 +4,7 @@ import Logo from "../Logo";
 
 function Footer() {
   return (
-    <section className="relative overflow-hidden py-10 bg-[#364037] border border-t-2 border-t-black">
+    <section className="relative overflow-hidden py-10 bg-[#364037] border border-t-2 border-t-white">
       <div className="relative z-10 mx-auto max-w-7xl px-4">
         <div className="-m-6 flex flex-wrap">
           <div className="w-full p-6 md:w-1/2 lg:w-5/12">
@@ -13,21 +13,21 @@ function Footer() {
                 <Logo width="100px" />
               </div>
               <div>
-                <p className="text-sm text-gray-600">
-                  &copy; Copyright 2023. All Rights Reserved by DevUI.
+                <p className="text-sm text-[#fff]">
+                  &copy; Copyright 2025. All Rights Reserved by QuillQuest.
                 </p>
               </div>
             </div>
           </div>
           <div className="w-full p-6 md:w-1/2 lg:w-2/12">
             <div className="h-full">
-              <h3 className="tracking-px mb-9  text-xs font-semibold uppercase text-gray-500">
+              <h3 className="tracking-px mb-9  text-md font-semibold uppercase text-[#fff]">
                 Company
               </h3>
               <ul>
                 <li className="mb-4">
                   <Link
-                    className=" text-base font-medium text-gray-900 hover:text-gray-700"
+                    className=" text-base font-medium text-gray-400 hover:text-[#fff] hover:underline"
                     to="/"
                   >
                     Features
@@ -35,7 +35,7 @@ function Footer() {
                 </li>
                 <li className="mb-4">
                   <Link
-                    className=" text-base font-medium text-gray-900 hover:text-gray-700"
+                    className=" text-base font-medium text-gray-400 hover:text-[#fff] hover:underline"
                     to="/"
                   >
                     Pricing
@@ -43,7 +43,7 @@ function Footer() {
                 </li>
                 <li className="mb-4">
                   <Link
-                    className=" text-base font-medium text-gray-900 hover:text-gray-700"
+                    className=" text-base font-medium  text-gray-400 hover:text-[#fff] hover:underline"
                     to="/"
                   >
                     Affiliate Program
@@ -51,7 +51,7 @@ function Footer() {
                 </li>
                 <li>
                   <Link
-                    className=" text-base font-medium text-gray-900 hover:text-gray-700"
+                    className=" text-base font-medium  text-gray-400 hover:text-[#fff] hover:underline"
                     to="/"
                   >
                     Press Kit
@@ -62,21 +62,21 @@ function Footer() {
           </div>
           <div className="w-full p-6 md:w-1/2 lg:w-2/12">
             <div className="h-full">
-              <h3 className="tracking-px mb-9  text-xs font-semibold uppercase text-gray-500">
+              <h3 className="tracking-px mb-9  text-md font-semibold uppercase text-[#fff]">
                 Support
               </h3>
               <ul>
                 <li className="mb-4">
                   <Link
-                    className=" text-base font-medium text-gray-900 hover:text-gray-700"
-                    to="/"
+                    className=" text-base font-medium  text-gray-400 hover:text-[#fff] hover:underline"
+                    to="/signup"
                   >
                     Account
                   </Link>
                 </li>
                 <li className="mb-4">
                   <Link
-                    className=" text-base font-medium text-gray-900 hover:text-gray-700"
+                    className=" text-base font-medium  text-gray-400 hover:text-[#fff] hover:underline"
                     to="/"
                   >
                     Help
@@ -84,7 +84,7 @@ function Footer() {
                 </li>
                 <li className="mb-4">
                   <Link
-                    className=" text-base font-medium text-gray-900 hover:text-gray-700"
+                    className=" text-base font-medium  text-gray-400 hover:text-[#fff] hover:underline"
                     to="/"
                   >
                     Contact Us
@@ -92,7 +92,7 @@ function Footer() {
                 </li>
                 <li>
                   <Link
-                    className=" text-base font-medium text-gray-900 hover:text-gray-700"
+                    className=" text-base font-medium  text-gray-400 hover:text-[#fff] hover:underline"
                     to="/"
                   >
                     Customer Support
@@ -103,13 +103,13 @@ function Footer() {
           </div>
           <div className="w-full p-6 md:w-1/2 lg:w-3/12">
             <div className="h-full">
-              <h3 className="tracking-px mb-9  text-xs font-semibold uppercase text-gray-500">
+              <h3 className="tracking-px mb-9  text-md font-semibold uppercase text-[#fff]">
                 Legals
               </h3>
               <ul>
                 <li className="mb-4">
                   <Link
-                    className=" text-base font-medium text-gray-900 hover:text-gray-700"
+                    className=" text-base font-medium  text-gray-400 hover:text-[#fff] hover:underline"
                     to="/"
                   >
                     Terms &amp; Conditions
@@ -117,7 +117,7 @@ function Footer() {
                 </li>
                 <li className="mb-4">
                   <Link
-                    className=" text-base font-medium text-gray-900 hover:text-gray-700"
+                    className=" text-base font-medium  text-gray-400 hover:text-[#fff] hover:underline"
                     to="/"
                   >
                     Privacy Policy
@@ -125,7 +125,7 @@ function Footer() {
                 </li>
                 <li>
                   <Link
-                    className=" text-base font-medium text-gray-900 hover:text-gray-700"
+                    className=" text-base font-medium  text-gray-400 hover:text-[#fff] hover:underline"
                     to="/"
                   >
                     Licensing
