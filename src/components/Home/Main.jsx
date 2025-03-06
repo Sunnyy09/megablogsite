@@ -52,7 +52,7 @@ function Main() {
           <div className="w-1/2">
             <div className="h-full  pl-4 flex flex-col justify-center">
               <span className="text-sm text-gray-300 h-12">Dec 27, 2024</span>
-              <Link className="hover:text-[#986c43]">
+              <Link className="hover:text-[#986c43] no-underline">
                 <div className="space-y-4">
                   <h3 className="text-white text-3xl font-semibold hover:text-[#986c43]">
                     Blog Title
