@@ -10,7 +10,7 @@ function Footer() {
           <div className="w-full p-6 md:w-1/2 lg:w-5/12">
             <div className="flex h-full flex-col justify-between">
               <div className="mb-4 inline-flex items-center">
-                <Logo width="100px" />
+                <h1 className="font-pacifico text-white">QuillQuest</h1>
               </div>
               <div>
                 <p className="text-sm text-[#fff]">
@@ -21,10 +21,10 @@ function Footer() {
           </div>
           <div className="w-full p-6 md:w-1/2 lg:w-2/12">
             <div className="h-full">
-              <h3 className="tracking-px mb-9  text-md font-semibold uppercase text-[#fff]">
+              <h3 className="tracking-px mb-9 text-lg font-semibold uppercase text-[#fff]">
                 Company
               </h3>
-              <ul>
+              <ul className="p-0">
                 <li className="mb-4">
                   <Link
                     className=" text-base font-medium text-gray-400 hover:text-[#fff] hover:underline"
@@ -62,10 +62,10 @@ function Footer() {
           </div>
           <div className="w-full p-6 md:w-1/2 lg:w-2/12">
             <div className="h-full">
-              <h3 className="tracking-px mb-9  text-md font-semibold uppercase text-[#fff]">
+              <h3 className="tracking-px mb-9 text-lg font-semibold uppercase text-[#fff]">
                 Support
               </h3>
-              <ul>
+              <ul className="p-0">
                 <li className="mb-4">
                   <Link
                     className=" text-base font-medium  text-gray-400 hover:text-[#fff] hover:underline"
@@ -85,7 +85,7 @@ function Footer() {
                 <li className="mb-4">
                   <Link
                     className=" text-base font-medium  text-gray-400 hover:text-[#fff] hover:underline"
-                    to="/"
+                    to="/contact"
                   >
                     Contact Us
                   </Link>
@@ -103,10 +103,10 @@ function Footer() {
           </div>
           <div className="w-full p-6 md:w-1/2 lg:w-3/12">
             <div className="h-full">
-              <h3 className="tracking-px mb-9  text-md font-semibold uppercase text-[#fff]">
+              <h3 className="tracking-px mb-9 text-lg font-semibold uppercase text-[#fff]">
                 Legals
               </h3>
-              <ul>
+              <ul className="p-0">
                 <li className="mb-4">
                   <Link
                     className=" text-base font-medium  text-gray-400 hover:text-[#fff] hover:underline"

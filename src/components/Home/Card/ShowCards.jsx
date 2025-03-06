@@ -43,7 +43,7 @@ const cardData = [
 function ShowCard() {
   return (
     <div className="w-full">
-      <ul className="w-full grid sm:w-full lg:grid-cols-3 md:grid-cols-2 gap-4 px-1">
+      <ul className="grid sm:w-full lg:grid-cols-3 md:grid-cols-2 gap-4 px-1">
         {cardData.map((card) => (
           <li className="min-h-96 border border-gray-200 shadow-sm">
             <Card src={card.src} title={card.title} content={card.content} />

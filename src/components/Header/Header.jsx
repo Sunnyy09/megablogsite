@@ -48,7 +48,7 @@ function Header() {
   return (
     <header className="h-[95px] w-full sticky top-0 z-20 shadow bg-[#364037] text-[#fff]">
       <Container className={`h-full`}>
-        <nav className="h-full mx-24 flex justify-center items-center">
+        <nav className="h-full mx-16 flex justify-center items-center">
           <div className="mr-4">
             <Link to="/" className="decoration-transparent">
               <h1 className="font-pacifico text-white">QuillQuest</h1>

@@ -27,7 +27,7 @@ function Main() {
             </p>
             <Link
               to="/about"
-              className="px-6 py-3 bg-blue-500 hover:bg-blue-600 rounded-lg text-white text-lg"
+              className="px-6 py-3 bg-blue-500 hover:bg-blue-600 rounded-lg text-white text-xl no-underline font-fredoka"
             >
               Learn More
             </Link>
