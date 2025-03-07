@@ -28,11 +28,11 @@ export default function ContactForm() {
       return;
     }
 
-    alert("Form submitted!"); // Replace this with actual form submission logic
+    alert("Form submitted!");
   };
 
   return (
-    <div className="max-w-lg mx-auto my-12 p-6 bg-white rounded-2xl shadow-lg">
+    <div className="max-w-lg sm:mx-auto mx-4 my-12 p-6 bg-white rounded-2xl shadow-lg">
       <h2 className="text-2xl font-bold text-gray-800 text-center mb-4">
         Contact Us
       </h2>

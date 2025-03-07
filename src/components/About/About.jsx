@@ -54,9 +54,9 @@ function About() {
         </div>
       </div>
       <div className="flex justify-center bg-[#986C43]">
-        <div className="w-4/5 px-8 py-16">
+        <div className="w-4/5 sm:px-8 py-16">
           <hr className="h-1 bg-white" />
-          <p className="text-white text-xl font-rubik tracking-widest">
+          <p className="text-white sm:text-xl text-lg font-rubik tracking-widest">
             We are passionate about creating a space where curiosity thrives and
             meaningful conversations take shape. Each article is crafted with
             the intent to spark ideas, challenge perspectives, and encourage

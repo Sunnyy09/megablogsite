@@ -54,30 +54,33 @@ function Header() {
   return (
     <header className="h-[95px] w-full sticky top-0 z-20 shadow bg-[#364037] text-[#fff]">
       <Container className={`h-full`}>
-        <nav className="h-full lg:mx-16 flex justify-between items-center">
+        <nav className="h-full lg:mx-16 lg:mr-0 flex justify-between items-center">
           <div className="mr-4">
             <Link to="/" className="decoration-transparent">
               <h1 className="font-pacifico text-white">QuillQuest</h1>
             </Link>
           </div>
           <ul
-            className={`ml-auto pt-1 md:flex ${
+            className={`ml-auto pt-1 md:flex items-center ${
               isSideBarShow
-                ? "absolute top-[95px] left-0 max-h-[52vh] py-8 pt-4 w-full md:w-[80%] l bg-transparent/80 flex flex-col gap-4 items-center"
+                ? "absolute top-[95px] left-0 max-h-[60vh] py-8 pt-4 w-full md:w-[80%] l bg-transparent/80 flex flex-col gap-4 items-center"
                 : "hidden"
             }`}
           >
             {navItems.map((item) =>
               item.active ? (
-                <li key={item.name} className="w-full flex justify-center">
+                <li
+                  key={item.name}
+                  className="md:w-auto w-full flex justify-center"
+                >
                   <button
                     onClick={() => {
                       navigate(item.slug);
                       setIsShowSideBar(false);
                     }}
-                    className={`inline-block text-lg font-normal md:w-auto w-4/5 text-white px-6 py-2 duration-200 hover:text-white/70 hover:bg-white/10 transition-all font-fredoka ${
+                    className={`inline-block text-lg text-center font-normal md:w-auto w-4/5 text-white px-6 py-2 duration-200 hover:text-white/70 hover:bg-white/10 transition-all font-fredoka ${
                       item.slug === "/login"
-                        ? "sm:bg-[#986c43] text-[#f4dec9] ml-2 mr-2 sm:border-none border-2 border-[#986c43]"
+                        ? "md:bg-[#986c43] text-[#f4dec9] ml-2 mr-2 md:border-none border-2 border-[#986c43]"
                         : ""
                     } ${
                       item.slug === "/signup"
