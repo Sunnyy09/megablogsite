@@ -63,25 +63,25 @@ function Header() {
           <ul
             className={`ml-auto pt-1 md:flex ${
               isSideBarShow
-                ? "absolute top-[95px] left-0 h-[52vh] pt-4 w-full md:w-[80%] l bg-transparent/80 flex flex-col gap-4 items-center"
+                ? "absolute top-[95px] left-0 max-h-[52vh] py-8 pt-4 w-full md:w-[80%] l bg-transparent/80 flex flex-col gap-4 items-center"
                 : "hidden"
             }`}
           >
             {navItems.map((item) =>
               item.active ? (
-                <li key={item.name}>
+                <li key={item.name} className="w-full flex justify-center">
                   <button
                     onClick={() => {
                       navigate(item.slug);
                       setIsShowSideBar(false);
                     }}
-                    className={`inline-block text-lg font-normal text-white px-6 py-2 duration-200 hover:text-white/70 hover:underline transition-all font-fredoka ${
+                    className={`inline-block text-lg font-normal md:w-auto w-4/5 text-white px-6 py-2 duration-200 hover:text-white/70 hover:bg-white/10 transition-all font-fredoka ${
                       item.slug === "/login"
-                        ? "bg-[#986c43] text-[#f4dec9] ml-2 mr-2 hover:bg-white/10 hover:no-underline rounded"
+                        ? "sm:bg-[#986c43] text-[#f4dec9] ml-2 mr-2 sm:border-none border-2 border-[#986c43]"
                         : ""
                     } ${
                       item.slug === "/signup"
-                        ? "bg-[#986c43] text-[#f4dec9] hover:bg-white/10 hover:no-underline rounded"
+                        ? "bg-[#986c43] text-[#f4dec9]"
                         : ""
                     }`}
                   >
