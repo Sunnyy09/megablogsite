@@ -7,6 +7,8 @@ export default {
         pacifico: ["Pacifico", "sans-serif"],
         playpen: ["Playpen Sans", "sans-serif"],
         fredoka: ["Fredoka", "sans-serif"],
+        roboto: ["Roboto Mono", "sans-serif"],
+        rubik: ["Rubik", "sans-serif"],
       },
     },
   },

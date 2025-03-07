@@ -22,7 +22,7 @@ function Header() {
     {
       name: "Contact",
       slug: "/contact",
-      active: !authStatus,
+      active: true,
     },
     {
       name: "Login",

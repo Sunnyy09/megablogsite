@@ -35,9 +35,9 @@ function Main() {
         </div>
       </div>
       {/* featured-post */}
-      <div className="absolute top-[550px] z-10 font-serif w-[70vw] bg-[#364037]">
-        <div className="px-8 py-4 max-h-[60vh] w-full flex">
-          <div className="w-1/2">
+      <div className="absolute top-[550px] md:top-[600px] lg:top-[520px] z-10 font-serif w-[70vw] bg-[#364037]">
+        <div className="px-8 py-4 md:max-h-[60vh] w-full flex md:flex-row flex-col">
+          <div className="md:w-1/2 w-full">
             <h2 className="text-left mb-6 text-2xl text-white font-bold ">
               Featured Post
             </h2>
@@ -45,11 +45,11 @@ function Main() {
               <img
                 src="https://images.pexels.com/photos/261662/pexels-photo-261662.jpeg?auto=compress&cs=tinysrgb&w=600"
                 alt=""
-                className="w-[95%]"
+                className="md:w-[95%] w-full"
               />
             </div>
           </div>
-          <div className="w-1/2">
+          <div className="md:w-1/2 w-full">
             <div className="h-full  pl-4 flex flex-col justify-center">
               <span className="text-sm text-gray-300 h-12">Dec 27, 2024</span>
               <Link className="hover:text-[#986c43] no-underline">
