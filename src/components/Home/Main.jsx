@@ -10,6 +10,8 @@ function Main() {
           autoPlay
           muted
           loop
+          playsInline
+          disableRemotePlayback
         >
           <source
             src="https://video.wixstatic.com/video/375882_9f1a8e8b364946f38b7eb05436e76503/1080p/mp4/file.mp4"
