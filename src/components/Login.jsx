@@ -33,13 +33,8 @@ function Login() {
   return (
     <div className="flex items-center justify-center w-full">
       <div
-        className={`mx-auto w-full max-w-lg bg-[#986c43] rounded-xl px-12 py-10 border border-black/50 shadow-lg shadow-[#986c43]`}
+        className={`sm:mx-auto w-full sm:h-auto h-[90vh] max-w-lg bg-[#986c43] sm:rounded-xl rounded-none sm:px-12 px-8 py-10 border border-black/50 shadow-lg shadow-[#986c43]`}
       >
-        {/* <div className="mb-2 flex justify-center">
-          <span className="inline-block w-full max-w-[100px]">
-            <Logo width="100%" />
-          </span>
-        </div> */}
         <h2 className="text-center text-[#fff] text-2xl font-bold leading-normal">
           Sign in to your account
         </h2>
