@@ -1,34 +1,30 @@
 import { useState } from "react";
+import contactService from "../../appwrite/contactService";
+import { Button, Input } from "../index";
+import { useForm } from "react-hook-form";
 
 export default function ContactForm() {
-  const [formData, setFormData] = useState({
-    name: "",
-    email: "",
-    message: "",
-  });
+  const {
+    register,
+    handleSubmit,
+    reset,
+    formState: { errors, isSending },
+  } = useForm();
 
-  const [errors, setErrors] = useState({ name: "", email: "", message: "" });
+  // const handleChange = (e) => {
+  //   setFormData({ ...formData, [e.target.name]: e.target.value });
+  //   setErrors({ ...errors, [e.target.name]: "" });
+  // };
 
-  const handleChange = (e) => {
-    setFormData({ ...formData, [e.target.name]: e.target.value });
-    setErrors({ ...errors, [e.target.name]: "" }); // Clear errors on change
-  };
-
-  const handleSubmit = (e) => {
-    e.preventDefault();
-
-    // Basic validation
-    let newErrors = { name: "", email: "", message: "" };
-    if (!formData.name) newErrors.name = "Name is required";
-    if (!formData.email) newErrors.email = "Email is required";
-    if (!formData.message) newErrors.message = "Message cannot be empty";
-
-    if (Object.values(newErrors).some((error) => error !== "")) {
-      setErrors(newErrors);
-      return;
+  const onSubmit = async (data) => {
+    try {
+      await contactService.createMessage(data);
+      alert("Message sent successfully");
+      reset();
+    } catch (error) {
+      console.error("Error submitting message:", error);
+      alert("Failed to send message.");
     }
-
-    alert("Form submitted!");
   };
 
   return (
@@ -36,66 +32,66 @@ export default function ContactForm() {
       <h2 className="text-2xl font-bold text-gray-800 text-center mb-4">
         Contact Us
       </h2>
-      <form onSubmit={handleSubmit} className="space-y-4">
-        {/* Name Input */}
+      <form onSubmit={handleSubmit(onSubmit)} className="space-y-4">
         <div>
-          <label className="block text-sm font-medium text-gray-700">
+          <label className="block ml-1 mb-1 text-sm font-medium text-gray-700">
             Name
           </label>
-          <input
+          <Input
             type="text"
-            name="name"
-            value={formData.name}
-            onChange={handleChange}
             className="w-full p-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:outline-none"
             placeholder="Enter your name"
+            {...register("name", { required: true, maxLength: 20 })}
           />
-          {errors.name && <p className="text-red-500 text-sm">{errors.name}</p>}
-        </div>
-
-        {/* Email Input */}
-        <div>
-          <label className="block text-sm font-medium text-gray-700">
-            Email
-          </label>
-          <input
-            type="email"
-            name="email"
-            value={formData.email}
-            onChange={handleChange}
-            className="w-full p-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:outline-none"
-            placeholder="Enter your email"
-          />
-          {errors.email && (
-            <p className="text-red-500 text-sm">{errors.email}</p>
+          {errors.name?.message && (
+            <p className="text-red-500 text-sm">{errors.name.message}</p>
           )}
         </div>
 
-        {/* Message Textarea */}
         <div>
-          <label className="block text-sm font-medium text-gray-700">
+          <label className="block ml-1 mb-1 text-sm font-medium text-gray-700">
+            Email
+          </label>
+          <Input
+            type="email"
+            className="w-full p-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:outline-none"
+            placeholder="Enter your email"
+            {...register("email", {
+              required: true,
+              pattern: {
+                value: /^([\w\.\-_]+)?\w+@[\w-_]+(\.\w+){1,}$/,
+                message: "Invalid email format",
+              },
+            })}
+          />
+          {errors.email?.message && (
+            <p className="text-red-500 text-sm">{errors.email.message}</p>
+          )}
+        </div>
+
+        <div>
+          <label className="block ml-1 mb-1 text-sm font-medium text-gray-700">
             Message
           </label>
           <textarea
-            name="message"
-            value={formData.message}
-            onChange={handleChange}
             className="w-full p-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:outline-none"
             placeholder="Write your message..."
             rows={4}
+            disabled={isSending}
+            {...register("message", { required: true })}
           ></textarea>
-          {errors.message && (
-            <p className="text-red-500 text-sm">{errors.message}</p>
+          {errors.message?.message && (
+            <p className="text-red-500 text-sm">{errors.message.message}</p>
           )}
         </div>
 
-        {/* Submit Button */}
-        <button
+        <Button
           type="submit"
           className="w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-lg transition-all"
+          disabled={isSending}
         >
-          Send Message
-        </button>
+          {isSending ? "Sending..." : "Send Message"}
+        </Button>
       </form>
     </div>
   );
