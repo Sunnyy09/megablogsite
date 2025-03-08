@@ -3,7 +3,7 @@ import ShowCard from "../Card/ShowCards";
 
 function RecentPosts() {
   return (
-    <div className="bg-white h-full w-[70vw] md:mt-48 sm:mt-[350px] mt-[300px]">
+    <div className="bg-white h-full sm:w-[70vw] w-[90vw]">
       <div className="w-full py-8">
         <div className="my-6 w-full">
           <h1 className="text-2xl decoration-current font-semibold">

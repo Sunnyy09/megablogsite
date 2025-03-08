@@ -77,12 +77,15 @@ function PostForm({ post }) {
   }, [watch, slugTransform, setValue]);
 
   return (
-    <form onSubmit={handleSubmit(submit)} className="flex flex-wrap">
-      <div className="w-2/3 px-2">
+    <form
+      onSubmit={handleSubmit(submit)}
+      className="w-full flex flex-col lg:flex-row lg:space-x-4 lg:space-y-0 space-y-6"
+    >
+      <div className="w-full lg:w-2/3 px-2 lg:space-y-0 space-y-4">
         <Input
           label="Title: "
           placeholder="Title"
-          className="bg-4"
+          className="mb-2"
           {...register("title", { required: true })}
         />
         <Input
@@ -103,7 +106,7 @@ function PostForm({ post }) {
           defaultValue={getValues("content")}
         />
       </div>
-      <div className="w-1/3 px-2">
+      <div className="w-full lg:w-1/3 px-2">
         <Input
           label="Featured Image: "
           type="file"
@@ -124,7 +127,7 @@ function PostForm({ post }) {
         )}
         <Select
           className="mb-4"
-          options={["active", "inactive"]}
+          options={["Active", "Inactive"]}
           label="Status"
           {...register("status", { required: true })}
         />

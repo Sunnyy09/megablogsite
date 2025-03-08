@@ -37,7 +37,7 @@ function Main() {
         </div>
       </div>
       {/* featured-post */}
-      <div className="absolute top-[550px] md:top-[600px] lg:top-[520px] z-10 font-serif w-[70vw] bg-[#364037]">
+      <div className="absolute top-[650px] sm:top-[500px] lg:top-[520px] z-10 font-serif sm:w-[70vw] w-[90vw] bg-[#364037]">
         <div className="px-8 py-4 md:max-h-[60vh] w-full flex md:flex-row flex-col">
           <div className="md:w-1/2 w-full">
             <h2 className="text-left mb-6 text-2xl text-white font-bold ">

@@ -31,7 +31,7 @@ function Home() {
         <div className="w-full">
           <Main />
         </div>
-        <div className="w-full flex justify-center">
+        <div className="w-full flex justify-center lg:mt-44 mt-[250px]">
           <RecentPosts />
         </div>
       </div>
